@@ -110,7 +110,7 @@ public class Student
 		  
 		 
 	  }
-	  System.out.println("Out of Loop...");
+	  System.out.println("Out of Loop!");
 	  
 	  System.out.println("Output By Name :");
 	  System.out.println("-------------------------------------------");
