@@ -1,10 +1,13 @@
 package DEMO;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class LoadingData {
 
 	static ArrayList<StudentInfo> list = new ArrayList<StudentInfo>();
+
+	static Scanner sc = new Scanner(System.in);
 
 	public static void loadData()
 
@@ -63,6 +66,49 @@ public class LoadingData {
 
 	public static ArrayList<StudentInfo> getData() {
 		return list;
+
+	}
+
+	public static void addStudentInfo() {
+		System.out.println("Enter Student Name :");
+		String name = sc.next();
+
+		System.out.println("Enter Subject :");
+		String sub = sc.next();
+
+		System.out.println("Enter Assignment Category :");
+		String asscat = sc.next();
+
+		System.out.println("Enter Submission Date :");
+		String date = sc.next();
+
+		System.out.println("Enter Points :");
+		int points = sc.nextInt();
+
+		StudentInfo stemp = new StudentInfo(name, sub, asscat, date, points);
+		list.add(stemp);
+
+		System.out.println("Student Info added successfully !!");
+	}
+
+	public static void deleteStudentInfo() {
+		System.out.println("Enter Student Name :");
+		String name = sc.next();
+
+		System.out.println("Enter Subject :");
+		String sub = sc.next();
+
+		System.out.println("Enter Assignment Category :");
+		String asscat = sc.next();
+
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getSname().equals(name) && list.get(i).getSub().equals(sub)
+					&& list.get(i).getAsscat().equals(asscat)) {
+				list.remove(i);
+			}
+		}
+
+		System.out.println("Student Info deleted successfully !!");
 
 	}
 

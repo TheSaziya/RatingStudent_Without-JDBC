@@ -92,12 +92,17 @@ public class LoadDataLogic {
 	}
 
 	public static void datapersubject(String sub) {
+
 		LoadingData.loadData();
+		System.out.println("Hello");
 		ArrayList<StudentInfo> newlist = LoadingData.getData();
+		// System.out.println(newlist.get(10).getSname());
 
 		// Distribution_List.DisplayDistributionTable();
 
 		ArrayList<Distribution> newdlist = Distribution_List.getDistributionList();
+
+		// System.out.println(newdlist.get(1).getAssCat());
 
 		int points = 0;
 		int weight = 0;
